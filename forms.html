@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta name="keywords" content="demo, form, responsive"/>
+<meta name="description" content="Fully responsive form for desktop, tablet, and mobile devices.">
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+
+<title>Intro to Forms</title>
+
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="fonts" href="font-awesome/fonts/fontawesome-webfont.woff">
+
+</head>
+
+<style>
+
+html{
+	font-size:12px;
+	font-family: tahoma, "Geneva", sans-serif;
+}
+form {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1.5rem;
+}
+input {
+	font-size: 1em;
+}
+.submitbtn input{
+	font-weight:bold;
+}
+#application_form {
+	border: 2px solid #9B5986;
+    max-width: 600px;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+textarea{
+	max-width: 300px;
+	min-width:200px;
+
+}
+input[type="text"]{
+	font-size: 20px;
+	text-align: center;
+	width:300px;
+	border: 2px solid #ccc;
+	height: 35px;
+	border-radius: 10px
+}
+input[type="radio"]{
+	display:inline-block;
+	position: relative;
+	top:6px;
+	width:60px;
+	height:17px;
+}
+input[type="checkbox"]{
+	width: auto;
+	height: 20px;
+	display: inline;
+	position: relative;
+	top: 5px;
+} 
+#myoptions{
+	width: 150px;
+	position:relative;
+}
+#form_submit{
+	width: 75px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #9b5986;
+    color: #fff;
+    margin-top: 10px;
+}
+.btn {
+	position: relative;
+	margin-top:2%;
+	height: 36px;
+	width: 36px;
+}
+/*#triple_lines{
+	content:"";
+	position: absolute;
+	width: 30px;
+	height:10px;
+	top: 15px;
+}
+*/
+#triple_lines:before {
+	border-bottom:17px double #9b59b6;
+	border-top: 6px solid #9b59b6;
+	content:"";
+	height:5px;
+	position: absolute;
+	right:3px;
+	top: 4px;
+	width:30px;
+}
+#triple_lines:hover .dropdown-content{
+	display:block;
+	cursor:pointer;
+}
+.dropdown-content {
+	display:none;
+	position:absolute;
+	right: 0;
+	background-color:#E6E6FA;
+	min-width: 120px;
+	margin-top: 35px;
+}
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display:block;
+}
+.dropdown-content a:hover {
+	color:#9b59b6;
+}
+@media only screen and (max-width:570px) and (min-width:350px){
+	input [type="text"]{
+	margin-left: 0px !important;
+	width: 230px;
+	font-size:15px;
+	}
+}
+
+</style>
+
+<body>
+
+
+<!-- The div will be the wrapper for the form -->
+<div id="triple_lines" class="btn">
+<div class="dropdown-content" style="left:0;">
+	<a href="#">Link 1</a>
+	<a href="#">Link 2</a>
+	<a href="#">Link 3</a>
+	</div>
+</div>
+
+<div id="application_form">
+
+<h1 contenteditable="true">School Application</h1>
+<p>Please Fill Out This Form</p>
+
+<form novalidate="novalidate">
+
+<span class="fa fa-pencil fa-fw" style="position:relative;/* top:30px; */left: 175px;";"></span>
+First Name: <input type="text" name="first" autocomplete="on" required placeholder="Enter your first name"><sup style="color:red;">*</sup><br> 
+
+<span class="fa fa-pencil fa-fw" style="position:relative;/* top:30px; */left: 175px;";"></span>
+Last Name: <input type="text" name="last" maxlength="20" autocomplete="on" required placeholder="Enter your last name" style="margin-left:10px"><sup style="color:red;">*</sup><br>
+
+<span class="fa fa-phone fa-fw" style="position:relative;/* top:30px; */left: 175px;"></span>
+Phone: <input type="text" name="phone" maxlength="10" required placeholder="ex. 0123456789" style="margin-left:50px"><sup style="color:red;">*</sup><br><br>
+
+
+Student? <input type="radio" name="student" value="student" checked>
+Non-Student? <input type="radio" name="student" value="non-student"><br><br>
+
+<label> What options are applicable to you?</label>
+School Loans? <input type="checkbox" name="loan">
+Grant? <input type="checkbox" name="grant">
+Scholarship? <input type="checkbox" name="scholarship"><br><br>
+
+How did you find us?
+<select name="find">
+	<option value="advertisement">Advertisement</option>
+	<option value="friend">Friend or Family</option>
+	<option value="alumni">Alumni</option>
+	<option value="online">Online</option>
+	<option value="school">Current School</option>
+	<option value="other">Other</option>
+</select>
+
+<p> Why do you want to attend here? (max. characters 500)</p>
+<textarea name="message" rows="10" cols="100" maxlength="500"></textarea>
+<br>
+
+<input id="form_submit" type="submit" value="Submit">
+
+</form>
+</div>
+
+
+</body>
+</html>
+
